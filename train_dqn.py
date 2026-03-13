@@ -2,6 +2,7 @@ from game import GameEnv
 from dqn_agent import Agent
 import matplotlib.pyplot as plt
 import pygame
+import numpy as np 
 
 env = GameEnv()
 agent = Agent()
@@ -41,3 +42,5 @@ plt.title("Deep Q Learning Performance")
 plt.xlabel("Episode")
 plt.ylabel("Reward")
 plt.show()
+np.save("dqn_rewards.npy", np.array(rewards))
+print("DQN verileri 'dqn_rewards.npy' olarak kaydedildi.")
